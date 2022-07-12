@@ -1,0 +1,62 @@
+.vacation-card{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 30% 30%;
+
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 200px;
+    height: 100px;
+    background-color: #FFFFFF;
+}
+
+#name{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#date{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageName{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageName {
+    width: 60px;
+    height: 60px;
+    background-color: cornsilk;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.initials {
+    position: relative;
+    top: 25px; /* 25% of parent */
+    font-size: 50px; /* 50% of parent */
+    line-height: 50px; /* 50% of parent */
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}

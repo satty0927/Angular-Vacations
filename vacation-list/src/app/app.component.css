@@ -7,6 +7,15 @@
 }
 
 .mainCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    justify-content: center;
+    align-items: center; 
+}
+
+.mainCard{
     position: absolute;
     width: 70%;
     height: 70%;
