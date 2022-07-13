@@ -1,0 +1,36 @@
+.vacation-registration{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.nameFields_modalLabel{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.nameFields_modalInput{
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+.dateFields_modalLabel{
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.dateFields_modalInput{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.statusFields_modalLabel{
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+.statusFields_modalInput{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    width: 120px;
+}
