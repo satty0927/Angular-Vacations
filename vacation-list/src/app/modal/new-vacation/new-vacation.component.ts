@@ -13,7 +13,14 @@ export class NewVacationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  name: string = '';
+  myDate: Date = new Date;
+  vacation:string = 'a';
+
   SaveVacation(){
+    console.log(this.name);
+    console.log(this.vacation);
+    console.log(this.myDate);
     this.router.navigate(['']);
   }
 

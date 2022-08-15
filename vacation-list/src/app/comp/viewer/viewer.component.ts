@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-viewer',
@@ -6,11 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viewer.component.css']
 })
 export class ViewerComponent implements OnInit {
-
-  constructor() { }
+  dbBaseAddress:string = "";
+  constructor() { 
+    this.dbBaseAddress = "https://vacations-df8f.restdb.io/rest/vacation-list";
+  }
 
   ngOnInit(): void {
+    this.GetVacations();
   }
+
+  GetVacations(){
+    axios.get<GetVacationResponse>(this.dbBaseAddress,
+      {
+        headers: {
+          'Access-Control-Allow-Origin':'*',
+          'content-type': 'application/json',
+          'x-apikey': 'a43fde0c527865cded147291a98cc4421a89b'
+        },
+      },
+    ).then((resp) => {
+      console.log(resp.data);
+      return resp.data;
+    });
+  }
+
   vacations = [
     {
       name:'Satyam',
@@ -40,3 +60,14 @@ export class ViewerComponent implements OnInit {
   ]
 
 }
+
+type User = {
+        _id : number ,
+        Name : string,
+        VacationDate: Date,
+        IsVactionConfirmed: boolean
+}
+
+type GetVacationResponse = {
+  data: User[];
+};

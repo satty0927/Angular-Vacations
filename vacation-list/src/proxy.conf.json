@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://vacations-df8f.restdb.io/rest/vacation-list",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

@@ -4,25 +4,22 @@
     <div class="inputFields">
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="name">
         </mat-form-field>
     </div>
     <label class="dateFields_modalLabel">Date</label>
     <div class="inputFields">
         <mat-form-field appearance="fill">
-            <mat-label>Enter a date range</mat-label>
-            <mat-date-range-input [rangePicker]="picker">
-              <input matStartDate placeholder="Start date">
-              <input matEndDate placeholder="End date">
-            </mat-date-range-input>
-            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="myDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
+            <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
     </div>
     <label class="statusFields_modalLabel">Status</label>
     <div class="inputFields">
-        <mat-radio-group aria-label="Vacation Type">
+        <mat-radio-group aria-label="Vacation Type" [(ngModel)]="myDate">
             <mat-radio-button value="TENTATIVE">TENTATIVE</mat-radio-button>
             <mat-radio-button value="CONFIRMED">CONFIRMED</mat-radio-button>
         </mat-radio-group>
