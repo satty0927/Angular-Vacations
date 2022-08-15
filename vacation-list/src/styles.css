@@ -3,3 +3,5 @@ body{
     background: rgb(3,36,175);
     background: linear-gradient(252deg, rgba(3,36,175,1) 0%, rgba(0,212,255,1) 100%);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

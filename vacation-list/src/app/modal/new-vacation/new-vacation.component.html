@@ -1,28 +1,32 @@
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Add Vacation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="vacation-registration">
-              <label class="nameFields_modalLabel">Name</label>
-              <input class="nameFields_modalInput" type="text">
-              <label class="dateFields_modalLabel">Date</label>
-              <input class="dateFields_modalInput" type="date">
-              <label class="statusFields_modalLabel">Status</label>
-              <div class="statusFields_modalInput" style="width: 200px; height: 0px;">
-              <input type="checkbox" name="Tentative" value="Tentative"> <span>TENTATIVE</span>
-              </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+<div class="titleText">Create New Vacations Status.....</div>
+<div class="mainCard">
+    <mat-label>Name</mat-label>
+    <div class="inputFields">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
     </div>
-  </div>
+    <label class="dateFields_modalLabel">Date</label>
+    <div class="inputFields">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+    </div>
+    <label class="statusFields_modalLabel">Status</label>
+    <div class="inputFields">
+        <mat-radio-group aria-label="Vacation Type">
+            <mat-radio-button value="TENTATIVE">TENTATIVE</mat-radio-button>
+            <mat-radio-button value="CONFIRMED">CONFIRMED</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <button mat-raised-button (click)="CancelVacation()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="SaveVacation()">Add Vacation</button>
+</div>
