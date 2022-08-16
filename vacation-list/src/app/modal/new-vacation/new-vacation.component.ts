@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import jsonVac from '../../../assets/vacations.json';
 
 @Component({
   selector: 'app-new-vacation',
@@ -15,12 +16,11 @@ export class NewVacationComponent implements OnInit {
 
   name: string = '';
   myDate: Date = new Date;
-  vacation:string = 'a';
+  vacation:string = '';
 
   SaveVacation(){
-    console.log(this.name);
-    console.log(this.vacation);
-    console.log(this.myDate);
+    jsonVac.vacations.push({ "name" : this.name, "date" : this.myDate.toDateString(), "status" : this.vacation});
+
     this.router.navigate(['']);
   }
 
@@ -29,3 +29,4 @@ export class NewVacationComponent implements OnInit {
   }
 
 }
+
