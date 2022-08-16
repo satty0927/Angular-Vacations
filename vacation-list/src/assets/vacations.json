@@ -1,9 +1,4 @@
 {
     "vacations" : [
-        {
-            "name" : "satyam",
-            "date" : "27/07/2022",
-            "status": "CONFIRMED"
-        }
     ]
 }
