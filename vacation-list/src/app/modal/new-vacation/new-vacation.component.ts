@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import jsonVac from '../../../assets/vacations.json';
+var fs = require('fs');
+
 
 @Component({
   selector: 'app-new-vacation',
@@ -27,6 +29,5 @@ export class NewVacationComponent implements OnInit {
   CancelVacation(){
     this.router.navigate(['']);
   }
-
 }
 

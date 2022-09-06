@@ -10,7 +10,7 @@ export class VacationCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.initials = this.GetInitials(this.vacation.name);
+    this.initials = this.GetInitials(this.vacation.Name);
   }
 
   @Input()
